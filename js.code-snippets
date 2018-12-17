@@ -11,7 +11,7 @@
 		"prefix": "author",
 		"body": [
 			"/**",
-			" * @author: giscafer",
+			" * @author: giscafer ,https://github.com/giscafer",
 			" * @date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
 			" * @description: ",
 			" */",
@@ -36,6 +36,7 @@
 			"/*--------------------------------------------------------------",
 			" *  Copyright (c) Nickbing Lao<giscafer@outlook.com>. All rights reserved.",
 			" *  Licensed under the MIT License.",
+			" *  Github: https://github.com/giscafer ",
 			" *-------------------------------------------------------------*/",
 			"",
 			"$0"
@@ -45,11 +46,44 @@
 	"For_Loop": {
 		"prefix": "forof",
 		"scope": "javascript,typescript",
-        "body": [
-          "for (const ${2:item} of ${1:arr}) {",
-          "\t$0",
-          "}",
-        ],
-        "description": "For of Loop"
-    }
+		"body": [
+			"for (const ${2:item} of ${1:arr}) {",
+			"\t$0",
+			"}",
+		],
+		"description": "For of Loop"
+	},
+	"Taro component": {
+		"prefix": "rnc-taro",
+		"scope": "javascript,typescript",
+		"body": [
+			"import Taro, { Component } from '@tarojs/taro';",
+			"import { Text, View } from '@tarojs/components';",
+			"export default class TemplateComponent extends Component {",
+			"  config = {",
+			"    navigationBarTitleText: 'TemplateComponent',",
+			"    backgroundColor: '#F8F8F8'",
+			"  };",
+			"  constructor(props) {",
+			"    super(props);",
+			"    this.state = {",
+			"    };",
+			"  }",
+			"  componentWillMount() { }",
+			"  componentWillReact() { }",
+			"  componentDidMount() { }",
+			"  componentWillUnmount() { }",
+			"  componentDidShow() { }",
+			"  componentDidHide() { }",
+			"  render() {",
+			"    return (",
+			"      <View>",
+			"        <Text> TemplateComponent </Text>",
+			"      </View>",
+			"    )",
+			"  }",
+			"}",
+		],
+		"description": "For of Loop"
+	}
 }
