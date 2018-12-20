@@ -94,6 +94,43 @@
 			"",
 			"}",
 		],
-		"description": "For of Loop"
+		"description": "Taro component snippets"
+	},
+	"Mobx Template": {
+		"prefix": "mobx-store",
+		"scope": "javascript,typescript",
+		"description": "Mobx store js snippets",
+		"body": [
+			"import { observable, action } from 'mobx';",
+			"import promiseHandler from '../../utils/promiseHandler';",
+			"import { post } from '../../services/http.services';",
+			"",
+			"",
+			"class TemplateStore {",
+			"",
+			"  constructor() {",
+			"  }",
+			"",
+			"  @observable loading = false;",
+			"  @observable data = [];",
+			"",
+			"",
+			"  @action.bound",
+			"  async loadData(params = {}) {",
+			"    this.loading = true;",
+			"    let [err, result] = await promiseHandler(post('api/endpoint', params));",
+			"    this.loading = false;",
+			"    if (err || !result) {",
+			"      // TODO:查询错误提示",
+			"      return;",
+			"    }",
+			"    this.data = result;",
+			"  }",
+			"",
+			"}",
+			"",
+			"",
+			"export default new TemplateStore ();"
+		]
 	}
 }
