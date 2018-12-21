@@ -132,5 +132,13 @@
 			"",
 			"export default new TemplateStore ();"
 		]
+	},
+	"Disabled_eslint_nextline": {
+		"prefix": "eslint-d",
+		"scope": "javascript,typescript",
+		"body": [
+			"// eslint-disable-next-line",
+		],
+		"description": "Disabled eslint nextline"
 	}
 }
