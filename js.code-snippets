@@ -1,144 +1,208 @@
 {
-	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
-	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
-	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
-	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
-	// Placeholders with the same ids are connected.
-	// Example:
-	"Author Information": {
-		"scope": "javascript,typescript",
-		"prefix": "author",
-		"body": [
-			"/**",
-			" * @author: giscafer ,https://github.com/giscafer",
-			" * @date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
-			" * @description: ",
-			" */",
-			"",
-			"$0"
-		],
-		"description": "Author Information"
-	},
-	"Print to console": {
-		"scope": "javascript,typescript",
-		"prefix": "log",
-		"body": [
-			"console.log('$1');",
-			"$2"
-		],
-		"description": "Log output to console"
-	},
-	"JS & TS Stub": {
-		"scope": "javascript,typescript",
-		"prefix": "stub",
-		"body": [
-			"/*--------------------------------------------------------------",
-			" *  Copyright (c) Nickbing Lao<giscafer@outlook.com>. All rights reserved.",
-			" *  Licensed under the MIT License.",
-			" *  Github: https://github.com/giscafer ",
-			" *-------------------------------------------------------------*/",
-			"",
-			"$0"
-		],
-		"description": "Insert Copyright Statement"
-	},
-	"For_Loop": {
-		"prefix": "forof",
-		"scope": "javascript,typescript",
-		"body": [
-			"for (const ${2:item} of ${1:arr}) {",
-			"\t$0",
-			"}",
-		],
-		"description": "For of Loop"
-	},
-	"Taro component": {
-		"prefix": "rnc-taro",
-		"scope": "javascript,typescript",
-		"body": [
-			"import Taro, { Component } from '@tarojs/taro';",
-			"import { Text, View } from '@tarojs/components';",
-			"",
-			"export default class TemplateComponent extends Component {",
-			"",
-			"  config = {",
-			"    navigationBarTitleText: 'TemplateComponent',",
-			"  };",
-			"",
-			"  constructor(props) {",
-			"    super(props);",
-			"    this.state = {",
-			"    };",
-			"  }",
-			"",
-			"  componentWillMount() { }",
-			"",
-			"  componentWillReact() { }",
-			"",
-			"  componentDidMount() { }",
-			"",
-			"  componentWillUnmount() { }",
-			"",
-			"  componentDidShow() { }",
-			"",
-			"  componentDidHide() { }",
-			"",
-			"  render() {",
-			"    return (",
-			"      <View>",
-			"        <Text> TemplateComponent </Text>",
-			"      </View>",
-			"    )",
-			"  }",
-			"",
-			"}",
-		],
-		"description": "Taro component snippets"
-	},
-	"Mobx Template": {
-		"prefix": "mobx-store",
-		"scope": "javascript,typescript",
-		"description": "Mobx store js snippets",
-		"body": [
-			"import { observable, action } from 'mobx';",
-			"import promiseHandler from '../../utils/promiseHandler';",
-			"import { post } from '../../services/http.services';",
-			"",
-			"",
-			"class TemplateStore {",
-			"",
-			"  constructor() {",
-			"  }",
-			"",
-			"  @observable loading = false;",
-			"  @observable data = [];",
-			"",
-			"",
-			"  @action.bound",
-			"  async loadData(params = {}) {",
-			"    this.loading = true;",
-			"    let [err, result] = await promiseHandler(post('api/endpoint', params));",
-			"    this.loading = false;",
-			"    if (err || !result) {",
-			"      // TODO:查询错误提示",
-			"      return;",
-			"    }",
-			"    this.data = result;",
-			"  }",
-			"",
-			"}",
-			"",
-			"",
-			"export default new TemplateStore ();"
-		]
-	},
-	"Disabled_eslint_nextline": {
-		"prefix": "eslint-d",
-		"scope": "javascript,typescript",
-		"body": [
-			"// eslint-disable-next-line",
-		],
-		"description": "Disabled eslint nextline"
-	}
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  "Author Information": {
+    "scope": "javascript,typescript",
+    "prefix": "author",
+    "body": [
+      "/**",
+      " * @author: giscafer ,https://github.com/giscafer",
+      " * @date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      " * @description: ",
+      " */",
+      "",
+      "$0"
+    ],
+    "description": "Author Information"
+  },
+  "Print to console": {
+    "scope": "javascript,typescript",
+    "prefix": "log",
+    "body": ["console.log('$1');", "$2"],
+    "description": "Log output to console"
+  },
+  "JS & TS Stub": {
+    "scope": "javascript,typescript",
+    "prefix": "stub",
+    "body": [
+      "/*--------------------------------------------------------------",
+      " *  Copyright (c) Nickbing Lao<giscafer@outlook.com>. All rights reserved.",
+      " *  Licensed under the MIT License.",
+      " *  Github: https://github.com/giscafer ",
+      " *-------------------------------------------------------------*/",
+      "",
+      "$0"
+    ],
+    "description": "Insert Copyright Statement"
+  },
+  "For_Loop": {
+    "prefix": "forof",
+    "scope": "javascript,typescript",
+    "body": ["for (const ${2:item} of ${1:arr}) {", "\t$0", "}"],
+    "description": "For of Loop"
+  },
+  "Vue View  Template": {
+    "prefix": "v-view",
+    "scope": "vue",
+    "body": [
+      "<template>",
+      "  <div></div>",
+      "</template>",
+      "<script>",
+      "export default {",
+      "  name: 'BasicDialog',",
+      "  props: {},",
+      "  data() {",
+      "    return {}",
+      "  },",
+      "  created() {},",
+      "  mounted() {},",
+      "  methods: {}",
+      "}",
+      "</script>",
+      "<style lang=\"scss\" scoped>",
+      "</style>"
+    ]
+  },
+  "Vue Dialog Template": {
+    "prefix": "v-dialog",
+    "scope": "vue",
+    "body": [
+      "<template>",
+      "  <div>",
+      "    <el-dialog",
+      "      title=\"TemplateDialog\"",
+      "      width=\"700px\"",
+      "      v-bind=\"$attrs\"",
+      "      v-on=\"$listeners\"",
+      "      @open=\"onOpen\"",
+      "      @close=\"onClose\"",
+      "    >",
+      "      <h3>dialog template</h3>",
+      "      <span slot=\"footer\" class=\"dialog-footer\">",
+      "        <el-button @click=\"close\">关 闭</el-button>",
+      "        <el-button type=\"primary\" @click=\"handelConfirm\">确定</el-button>",
+      "      </span>",
+      "    </el-dialog>",
+      "  </div>",
+      "</template>",
+      "<script>",
+      "export default {",
+      "  name: 'TemplateDialog',",
+      "  components: {},",
+      "  inheritAttrs: false,",
+      "  props: {},",
+      "  data() {",
+      "    return {}",
+      "  },",
+      "  computed: {},",
+      "  created() {},",
+      "  methods: {",
+      "    onOpen() {},",
+      "    onClose() {},",
+      "    close() {",
+      "      this.$emit('update:visible', false)",
+      "    },",
+      "    handelConfirm() {",
+      "      // do something",
+      "      this.close()",
+      "    }",
+      "  }",
+      "}",
+      "</script>",
+      "<style lang=\"scss\" scoped>",
+      "</style>"
+    ]
+  },
+  "Taro component": {
+    "prefix": "rnc-taro",
+    "scope": "javascript,typescript",
+    "body": [
+      "import Taro, { Component } from '@tarojs/taro';",
+      "import { Text, View } from '@tarojs/components';",
+      "",
+      "export default class TemplateComponent extends Component {",
+      "",
+      "  config = {",
+      "    navigationBarTitleText: 'TemplateComponent',",
+      "  };",
+      "",
+      "  constructor(props) {",
+      "    super(props);",
+      "    this.state = {",
+      "    };",
+      "  }",
+      "",
+      "  componentWillMount() { }",
+      "",
+      "  componentWillReact() { }",
+      "",
+      "  componentDidMount() { }",
+      "",
+      "  componentWillUnmount() { }",
+      "",
+      "  componentDidShow() { }",
+      "",
+      "  componentDidHide() { }",
+      "",
+      "  render() {",
+      "    return (",
+      "      <View>",
+      "        <Text> TemplateComponent </Text>",
+      "      </View>",
+      "    )",
+      "  }",
+      "",
+      "}"
+    ],
+    "description": "Taro component snippets"
+  },
+  "Mobx Template": {
+    "prefix": "mobx-store",
+    "scope": "javascript,typescript",
+    "description": "Mobx store js snippets",
+    "body": [
+      "import { observable, action } from 'mobx';",
+      "import promiseHandler from '../../utils/promiseHandler';",
+      "import { post } from '../../services/http.services';",
+      "",
+      "",
+      "class TemplateStore {",
+      "",
+      "  constructor() {",
+      "  }",
+      "",
+      "  @observable loading = false;",
+      "  @observable data = [];",
+      "",
+      "",
+      "  @action.bound",
+      "  async loadData(params = {}) {",
+      "    this.loading = true;",
+      "    let [err, result] = await promiseHandler(post('api/endpoint', params));",
+      "    this.loading = false;",
+      "    if (err || !result) {",
+      "      // TODO:查询错误提示",
+      "      return;",
+      "    }",
+      "    this.data = result;",
+      "  }",
+      "",
+      "}",
+      "",
+      "",
+      "export default new TemplateStore ();"
+    ]
+  },
+  "Disabled_eslint_nextline": {
+    "prefix": "eslint-d",
+    "scope": "javascript,typescript",
+    "body": ["// eslint-disable-next-line"],
+    "description": "Disabled eslint nextline"
+  }
 }
